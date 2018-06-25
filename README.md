@@ -2,7 +2,7 @@
 
 Analysis to accompany eLife Insight piece, titled "Genome evolution: We are not so special"
 
-Zachary R. Lewis and Casey W. Dunn
+by Zachary R. Lewis and Casey W. Dunn
 
 ## Contents
 
@@ -18,5 +18,5 @@ under "provenance."
 
 Each time you want to execute an analysis:
 
-- cd to the root of the repository, eg `cd gene_inventory_2018`.
+- Navigate to the root of the repository, eg `cd gene_inventory_2018`.
 - Run the code, eg lanch `R` and run `source("analysis.R")`.
