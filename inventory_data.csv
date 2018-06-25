@@ -1,0 +1,26 @@
+study,node,node_renamed,genes_total,gained,lost,provenance,Method
+Paps2018,Bilateria,,9337,1580,520,Figure_1,HomologyGroups
+Paps2018,Planulozoa,,8433,1201,72,Figure_1,HomologyGroups
+Paps2018,Eumetozoa,,4910,494,263,Figure_1,HomologyGroups
+Paps2018,Metazoa,Metazoa,6331,1189,503,Figure_1,HomologyGroups
+Paps2018,Choanozoa,Choanozoa,4883,399,497,Figure_1,HomologyGroups
+Paps2018,Filachoanimalia,,4182,340,420,Figure_1,HomologyGroups
+Paps2018,Holozoa,Holozoa,3878,389,347,Figure_1,HomologyGroups
+Richter2018,Eukaryotes,,"6,416",NA,NA,Supplemental_File_5,OrthoMCL
+Richter2018,Opisthokonts,Opisthokonts,"6,663",634,387,Supplemental_File_5,OrthoMCL
+Richter2018,Holozoans,Holozoa,"7,395",923,191,Supplemental_File_5,OrthoMCL
+Richter2018,Choanozoans,Choanozoa,"8,119",896,172,Supplemental_File_5,OrthoMCL
+Richter2018,Choanoflagellates,Choanoflagellates,"9,425","2,005",699,Supplemental_File_5,OrthoMCL
+Richter2018,Animals,Metazoa,"8,192","1,718","1,645",Supplemental_File_5,OrthoMCL
+Suga2013,Opisthokonts,Opisthokonts,5029,NA,NA,Figure_2,PfamDomains
+Suga2013,Holozoa,Holozoa,4969,100,160,Figure_2,PfamDomains
+Suga2013,Choanozoans,Choanozoa,4978,61,52,Figure_2,PfamDomains
+Suga2013,Metazoa,Metazoa,5157,235,56,Figure_2,PfamDomains
+Fairclough2013,Opisthokonts,Opisthokonts,"10,120",NA,NA,Figure_2,OrthoMCL
+Fairclough2013,Choanozoans,Choanozoa,9755,760,1125,Figure_2,OrthoMCL
+Fairclough2013,Choanoflagellates,Choanoflagellates,6706,574,3622,Figure_2,OrthoMCL
+Fairclough2013,Metazoa,Metazoa,10272,1235,718,Figure_2,OrthoMCL
+King2008,Opisthokonts,Opisthokonts,NA,56,23,Table S3,CsurosIntronRates 
+King2008,Holozoans,Holozoa,NA,61,0,Table S3,CsurosIntronRates 
+King2008,Choanoflagellates,Choanoflagellates,NA,69,167,Table S3,CsurosIntronRates 
+King2008,Metazoa,Metazoa,NA,135,23,Table S3,CsurosIntronRates 
