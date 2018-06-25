@@ -68,8 +68,8 @@ countPlotNoLegend<-countPlot + theme(legend.position="none", axis.text.x = eleme
 countPlotNoLegend
 
 #save output
-ggsave( "fig1B.pdf", countPlot, device=pdf, width=5, height=4 )
-ggsave( "fig1B_noLegend.pdf", countPlotNoLegend, device=pdf, width=5, height=4 )
+ggsave( "fig1C.pdf", countPlot, device=pdf, width=5, height=4 )
+ggsave( "fig1C_noLegend.pdf", countPlotNoLegend, device=pdf, width=5, height=4 )
 
 ################################
 # scatterplot gains vs. losses
@@ -90,14 +90,14 @@ gainLossPlot <- D.noNA %>%
     #scale_x_continuous(limits = c(0, 3700)) + scale_y_continuous(limits = c(0, 3700))
 
 #layering points
-gainLossPlot <- gainLossPlotNoScaleSwap + geom_point(aes(x=lost, y=gained, pch=study), col="grey90", na.rm = TRUE, size = 0,stroke=3) +
+gainLossPlot <- gainLossPlot + geom_point(aes(x=lost, y=gained, pch=study), col="grey90", na.rm = TRUE, size = 0,stroke=3) +
   geom_point(aes(x=lost, y=gained, col=D.noNA$node_renamed, pch=study), na.rm = TRUE, size = 3,stroke=1) 
 
 gainLossPlot
 
-ggsave( "fig1D_swap.pdf", gainLossPlotNoScaleSwap, device=pdf, width=5, height=4 )
+ggsave( "fig1D_swap.pdf", gainLossPlot, device=pdf, width=5, height=4 )
 
-gainLossPlotnoLegend<-gainLossPlotNoScaleSwap + theme(legend.position="none")
+gainLossPlotnoLegend<-gainLossPlot + theme(legend.position="none")
 gainLossPlotnoLegend
 
 ggsave( "fig1D_noLegend_swap.pdf", gainLossPlotnoLegend, device=pdf, width=5, height=4 )
