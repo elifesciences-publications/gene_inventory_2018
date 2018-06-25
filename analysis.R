@@ -95,12 +95,12 @@ gainLossPlot <- gainLossPlot + geom_point(aes(x=lost, y=gained, pch=study), col=
 
 gainLossPlot
 
-ggsave( "fig1D_swap.pdf", gainLossPlot, device=pdf, width=5, height=4 )
+ggsave( "fig1D.pdf", gainLossPlot, device=pdf, width=5, height=4 )
 
 gainLossPlotnoLegend<-gainLossPlot + theme(legend.position="none")
 gainLossPlotnoLegend
 
-ggsave( "fig1D_noLegend_swap.pdf", gainLossPlotnoLegend, device=pdf, width=5, height=4 )
+ggsave( "fig1D_noLegend.pdf", gainLossPlotnoLegend, device=pdf, width=5, height=4 )
 
 
 
