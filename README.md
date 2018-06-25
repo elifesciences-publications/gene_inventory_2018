@@ -18,5 +18,5 @@ under "provenance."
 
 Each time you want to execute an analysis:
 
-- Navigate to the root of the repository, eg `cd gene_inventory_2018`.
-- Run the code, eg lanch `R` and run `source("analysis.R")`.
+- Navigate to the root of the repository, e.g., `cd gene_inventory_2018`.
+- Run the code, e.g., lanch `R` and run `source("analysis.R")`.
