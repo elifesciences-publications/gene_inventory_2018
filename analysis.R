@@ -2,16 +2,17 @@
 # title: "Analyses"
 # author: "Casey Dunn, Zack Lewis"
 # date: "6/13/2018"
-# output: html_document
 # ---
 
-# Data are not directly comparable. Both Fairclough2013 and Richter2018 rely on OrthoMCL, so they are the most comparable. Suga2013 rely on Pfam domains, so their numbers are much lower than other studies.
+# Note that gene inventory data are not directly comparable. 
+#   Both Fairclough2013 and Richter2018 rely on OrthoMCL, so they are the most comparable. 
+#   Suga2013 rely on Pfam domains, so their numbers are much lower than other studies.
 
 # dependencies
-
 library(tidyverse)
 library(reshape2)
 
+# import data
 D = read_csv("inventory_data.csv")
 
 #remove King2008 data, because intron gain/loss not directly comparable
@@ -40,6 +41,10 @@ FilteredReorder = Filtered %>%
 
 FilteredReorder = FilteredReorder %>% filter(!is.na(node_renamed))
 
+#############################
+# plotting gene family counts
+#############################
+
 countPlot <- FilteredReorder %>%
   ggplot() +
     #geom_point(aes(x=node_renamed, y = n, col =attribute, pch=study), size=2,stroke = 2) +
@@ -66,14 +71,12 @@ countPlotNoLegend
 ggsave( "fig1B.pdf", countPlot, device=pdf, width=5, height=4 )
 ggsave( "fig1B_noLegend.pdf", countPlotNoLegend, device=pdf, width=5, height=4 )
 
-
+################################
 # scatterplot gains vs. losses
+################################
 
 #remove NAs
 D.noNA = D %>% filter(!is.na(node_renamed))
-
-
-### with color and pch swapped
 
 gainLossPlot <- D.noNA %>%
 	ggplot() +
@@ -91,7 +94,6 @@ gainLossPlot <- gainLossPlotNoScaleSwap + geom_point(aes(x=lost, y=gained, pch=s
   geom_point(aes(x=lost, y=gained, col=D.noNA$node_renamed, pch=study), na.rm = TRUE, size = 3,stroke=1) 
 
 gainLossPlot
-
 
 ggsave( "fig1D_swap.pdf", gainLossPlotNoScaleSwap, device=pdf, width=5, height=4 )
 
