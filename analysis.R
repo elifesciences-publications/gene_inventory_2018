@@ -41,39 +41,10 @@ FilteredReorder = Filtered %>%
 
 FilteredReorder = FilteredReorder %>% filter(!is.na(node_renamed))
 
-#############################
-# plotting gene family counts
-#############################
 
-countPlot <- FilteredReorder %>%
-  ggplot() +
-    #geom_point(aes(x=node_renamed, y = n, col =attribute, pch=study), size=2,stroke = 2) +
-    geom_line(aes(group=interaction(study, attribute),  x = node_renamed, y = n, col = attribute)) +
-    theme_classic() +
-    guides(colour = guide_legend(title="Attribute")) +
-    guides(pch = guide_legend(title="Study")) +
-    labs(x = "Node", y = "N") +
-    theme(legend.position = "right") +
-    scale_shape_manual(values=c(0,1,2,5)) 
-
-#layering points
-countPlot <- countPlot +  geom_point(aes(x=node_renamed, y = n,  pch=study), col ="grey90", size=0,stroke = 3) +
-  geom_point(aes(x=node_renamed, y = n, col =attribute, pch=study), size=3,stroke = 1)
-
-# changing color order
-countPlot <- countPlot + scale_color_manual(values=c("#00BA38","#619CFF", "#F8766D"))
-
-#removing legend and changing angle
-countPlotNoLegend<-countPlot + theme(legend.position="none", axis.text.x = element_text(angle = 45, hjust = 1, size=10))
-countPlotNoLegend
-
-#save output
-ggsave( "fig1C.pdf", countPlot, device=pdf, width=5, height=4 )
-ggsave( "fig1C_noLegend.pdf", countPlotNoLegend, device=pdf, width=5, height=4 )
-
-################################
-# scatterplot gains vs. losses
-################################
+###################################
+# scatterplot of gains vs. losses #
+###################################
 
 #remove NAs
 D.noNA = D %>% filter(!is.na(node_renamed))
@@ -95,16 +66,46 @@ gainLossPlot <- gainLossPlot + geom_point(aes(x=lost, y=gained, pch=study), col=
 
 gainLossPlot
 
-ggsave( "fig1D.pdf", gainLossPlot, device=pdf, width=5, height=4 )
+ggsave( "fig1C.pdf", gainLossPlot, device=pdf, width=5, height=4 )
 
 gainLossPlotnoLegend<-gainLossPlot + theme(legend.position="none")
 gainLossPlotnoLegend
 
-ggsave( "fig1D_noLegend.pdf", gainLossPlotnoLegend, device=pdf, width=5, height=4 )
+ggsave( "fig1C_noLegend.pdf", gainLossPlotnoLegend, device=pdf, width=5, height=4 )
 
 
 
+###############################
+# plotting gene family counts #
+###############################
 
+# uncomment this code to produce an exploratory figure counting gene group number, gains and losses, across each study
 
-
-
+# countPlot <- FilteredReorder %>%
+#   ggplot() +
+#   #geom_point(aes(x=node_renamed, y = n, col =attribute, pch=study), size=2,stroke = 2) +
+#   geom_line(aes(group=interaction(study, attribute),  x = node_renamed, y = n, col = attribute)) +
+#   theme_classic() +
+#   guides(colour = guide_legend(title="Attribute")) +
+#   guides(pch = guide_legend(title="Study")) +
+#   labs(x = "Node", y = "N") +
+#   theme(legend.position = "right") +
+#   scale_shape_manual(values=c(0,1,2,5)) 
+# 
+# #layering points
+# countPlot <- countPlot +  geom_point(aes(x=node_renamed, y = n,  pch=study), col ="grey90", size=0,stroke = 3) +
+#   geom_point(aes(x=node_renamed, y = n, col =attribute, pch=study), size=3,stroke = 1)
+# 
+# # changing color order
+# countPlot <- countPlot + scale_color_manual(values=c("#00BA38","#619CFF", "#F8766D"))
+# 
+# #removing legend and changing angle
+# countPlotNoLegend<-countPlot + theme(legend.position="none", axis.text.x = element_text(angle = 45, hjust = 1, size=10))
+# countPlotNoLegend
+# 
+# #save output
+# ggsave( "fig1C.pdf", countPlot, device=pdf, width=5, height=4 )
+# ggsave( "fig1C_noLegend.pdf", countPlotNoLegend, device=pdf, width=5, height=4 )
+# 
+# 
+# 

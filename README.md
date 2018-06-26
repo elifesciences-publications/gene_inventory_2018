@@ -8,7 +8,7 @@ by Zachary R. Lewis and Casey W. Dunn
 
 - `inventory_data.csv` Gene inventory data from the cited papers. Source of the data is listed
 under "provenance." 
-- `analysis.R` The `R` script for generating Figure 1, panels C and D. 
+- `analysis.R` The `R` script for generating Figure 1, panel C. 
 
 ## Dependencies
 
