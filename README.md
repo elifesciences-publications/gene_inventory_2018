@@ -1,14 +1,18 @@
 # gene_inventory_2018
 
-Analysis to accompany eLife Insight piece, titled "Genome evolution: We are not so special"
+Analysis to accompany eLife Insight piece:
 
-by Zachary R. Lewis and Casey W. Dunn
+> Lewis, ZR and CW Dunn. (2018) Genome evolution: We are not so special. eLife. http://dx.doi.org/10.7554/eLife.38726
+
+
+![Figure 1](https://raw.githubusercontent.com/dunnlab/gene_inventory_2018/master/Figure_1.png)
+
 
 ## Contents
 
 - `inventory_data.csv` Gene inventory data from the cited papers. Source of the data is listed
-under "provenance." 
-- `analysis.R` The `R` script for generating Figure 1, panel C. 
+under "provenance."
+- `analysis.R` The `R` script for generating Figure 1, panel C.
 
 ## Dependencies
 
