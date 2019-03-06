@@ -1,3 +1,8 @@
+
+
+### This code is associated with the paper from Lewis et al., "Genome Evolution: We are not so special". eLife, 2018. http://dx.doi.org/10.7554/eLife.38726
+
+
 # gene_inventory_2018
 
 Analysis to accompany eLife Insight piece:
